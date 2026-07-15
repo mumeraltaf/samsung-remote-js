@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Samsung Remote</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>Odyssey G7 Remote</h1>
+    <div id="status" class="status status-unknown">checking…</div>
+  </header>
+
+  <section id="setup" class="card hidden">
+    <p id="setup-message">Connect to your monitor first.</p>
+    <ul id="device-list"></ul>
+    <div class="manual-entry">
+      <input id="manual-host" type="text" placeholder="monitor IP address">
+      <button id="manual-connect" class="btn btn-secondary">Connect</button>
+    </div>
+    <a id="trust-cert-link" class="btn btn-link disabled" target="_blank" rel="noopener">
+      First time? Trust the monitor's certificate ↗
+    </a>
+  </section>
+
+  <section id="remote" class="card hidden">
+    <div class="row row-top">
+      <button class="btn key" data-key="power">⏻</button>
+      <button class="btn key" data-key="source">Source</button>
+      <button class="btn key" data-key="mute">Mute</button>
+    </div>
+
+    <div class="dpad">
+      <button class="btn key dpad-up" data-key="up">▲</button>
+      <button class="btn key dpad-left" data-key="left">◀</button>
+      <button class="btn key dpad-center" data-key="enter">OK</button>
+      <button class="btn key dpad-right" data-key="right">▶</button>
+      <button class="btn key dpad-down" data-key="down">▼</button>
+    </div>
+
+    <div class="row">
+      <button class="btn key" data-key="back">Back</button>
+      <button class="btn key" data-key="home">Home</button>
+      <button class="btn key" data-key="menu">Menu</button>
+    </div>
+
+    <div class="row">
+      <button class="btn key" data-key="vol_down">Vol −</button>
+      <button class="btn key" data-key="vol_up">Vol +</button>
+    </div>
+
+    <div class="row">
+      <button class="btn key" data-key="ch_down">Ch −</button>
+      <button class="btn key" data-key="ch_up">Ch +</button>
+    </div>
+
+    <div class="row playback">
+      <button class="btn key" data-key="rewind">⏪</button>
+      <button class="btn key" data-key="play">▶</button>
+      <button class="btn key" data-key="pause">⏸</button>
+      <button class="btn key" data-key="stop">⏹</button>
+      <button class="btn key" data-key="fast_forward">⏩</button>
+    </div>
+
+    <button id="reset-btn" class="btn btn-link">Switch device</button>
+  </section>
+</div>
+<script src="remote.js"></script>
+</body>
+</html>
