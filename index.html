@@ -32,12 +32,36 @@
       <button class="btn key" data-key="mute">Mute</button>
     </div>
 
-    <div class="dpad">
-      <button class="btn key dpad-up" data-key="up">▲</button>
-      <button class="btn key dpad-left" data-key="left">◀</button>
-      <button class="btn key dpad-center" data-key="enter">OK</button>
-      <button class="btn key dpad-right" data-key="right">▶</button>
-      <button class="btn key dpad-down" data-key="down">▼</button>
+    <div class="mode-toggle">
+      <button id="mode-dpad-btn" class="btn mode-btn active" data-mode="dpad">D-Pad</button>
+      <button id="mode-trackpad-btn" class="btn mode-btn" data-mode="trackpad">Trackpad</button>
+      <button id="mode-keyboard-btn" class="btn mode-btn" data-mode="keyboard">Keyboard</button>
+    </div>
+
+    <div id="dpad-mode">
+      <div class="dpad">
+        <button class="btn key dpad-up" data-key="up">▲</button>
+        <button class="btn key dpad-left" data-key="left">◀</button>
+        <button class="btn key dpad-center" data-key="enter">OK</button>
+        <button class="btn key dpad-right" data-key="right">▶</button>
+        <button class="btn key dpad-down" data-key="down">▼</button>
+      </div>
+    </div>
+
+    <div id="trackpad-mode" class="hidden">
+      <div id="trackpad"></div>
+      <div class="row">
+        <button id="trackpad-click" class="btn btn-secondary">Click</button>
+        <button id="trackpad-right-click" class="btn">Right-click ⚠︎</button>
+      </div>
+    </div>
+
+    <div id="keyboard-mode" class="hidden">
+      <input id="keyboard-input" type="text" placeholder="Focus a field on the TV, then type here…" autocomplete="off" autocapitalize="off" autocorrect="off">
+      <div class="row">
+        <button id="keyboard-send" class="btn btn-secondary">Send</button>
+        <button id="keyboard-done" class="btn">Done</button>
+      </div>
     </div>
 
     <div class="row">
